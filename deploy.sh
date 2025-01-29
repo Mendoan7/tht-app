@@ -1,16 +1,5 @@
 #!/bin/bash
 
-# Make sure this file has executable permissions, run `chmod +x deploy.sh` to ensure it does
-
-# Variable name to check maintenance mode
-ENV_VAR_NAME="MAINTENANCE_MODE"
-
-# Check if the environment variable is set to "true"
-if [[ "${!ENV_VAR_NAME}" = "true" ]]; then
-  echo "Entering maintenance mode..."
-  php artisan down
-fi
-
 #
 composer install --optimize-autoloader --no-dev
 
